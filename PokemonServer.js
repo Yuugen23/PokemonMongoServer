@@ -20,7 +20,7 @@ async function startServer() {
 
     await mongo.mongoConnect()
 
-    server.listen(PORT, () => console.log(`Pokemon server is running at port ${PORT}`))
+    server.listen(PORT, () => console.log(`Pokemon server is running on port ${PORT}`))
 
 }
 

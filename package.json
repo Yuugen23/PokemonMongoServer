@@ -5,7 +5,7 @@
   "main": "PokemonServer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon PokemonServer.js"
+    "start": "node PokemonServer.js"
   },
   "author": "",
   "license": "ISC",

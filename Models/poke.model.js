@@ -4,7 +4,6 @@ const Pokemon = require('../Mongo/Pokemon.Schema.js')
 // insert
 
 async function insert(pokemon) {
-    console.log('inserting: \n', pokemon);
     const filter = {
         name: pokemon.name
     }

@@ -9,7 +9,6 @@ dotenv.config()
 function checkPassMiddleware(req, res, next) {
     const pass = req.body.pass
     const correctPass = process.env.PASS
-    console.log(correctPass);
     if(!pass || pass != correctPass) {
         return res.redirect('https://youtu.be/RfiQYRn7fBg?si=wbYghmj1dbwe4KLB')
     }
@@ -18,7 +17,7 @@ function checkPassMiddleware(req, res, next) {
 router.post('/insert', checkPassMiddleware, pokeController.insertPokemon)
 router.get('/all', pokeController.getAllPokemons)
 router.get('/:id', pokeController.getAPokemon)
-router.get((req,res) => {
+router.all('*',(req,res) => {
     res.status(404).send('Page Not Found Error')
 })
 
